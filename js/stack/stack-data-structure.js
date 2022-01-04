@@ -5,11 +5,15 @@ class Stack {
   }
 
   canPush() {
-    // ... your code goes here
+    if (!this.stackControl.length) {
+      return true;
+    } else if (this.stackControl.length === this.MAX_SIZE) {
+      return false;
+    }
   }
 
   isEmpty() {
-    // ... your code goes here
+    return !this.stackControl.length ? true : false;
   }
 
   push(item) {
@@ -22,7 +26,7 @@ class Stack {
 
   display() {
     // ... your code goes here
-  }  
+  }
 }
 
 // This is required to enable the automated tests, please ignore it.
